@@ -1,0 +1,22 @@
+@startuml calificaiones
+
+skinparam actorStyle awesome
+actor Profesor #transparent;line:cornflowerblue;line.bold;text:black
+actor Alumno #transparent;line:lightcoral;line.bold;text:black
+actor Tutor #transparent;line:darkmagenta;line.bold;text:black
+actor Administrador #transparent;line:teal;line.bold;text:black
+
+package Calificaciones {
+  usecase "Asignar Calificación" as CU1 
+  usecase "Visualizar Calificación" as CU2 
+  usecase "Modificar Calificación" as CU3 
+}
+'Calificaciones
+Profesor --> CU1
+Profesor --> CU2
+Profesor --> CU3
+Alumno --> CU2
+Tutor --> CU2
+Administrador --> CU2
+
+@enduml
